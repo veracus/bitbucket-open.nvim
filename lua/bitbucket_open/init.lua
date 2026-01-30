@@ -199,4 +199,12 @@ end
 
 M.setup()
 
+-- Test hooks (not part of public API)
+M._test = {
+  parse_remote = parse_remote,
+  build_url = build_url,
+  current_ref = current_ref,
+  git_root = git_root,
+}
+
 return M

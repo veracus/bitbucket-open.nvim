@@ -44,3 +44,12 @@ require("bitbucket_open").setup({
 
 ## License
 MIT
+
+## Tests
+Run the minimal Lua test harness:
+
+```sh
+lua tests/run.lua
+```
+
+This uses a tiny custom runner (no external deps) and stubs Neovim APIs.

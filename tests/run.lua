@@ -107,6 +107,9 @@ end
 local url = mod2._test.build_url(fake_root, "/repo/main.go", 0, 0)
 assert_eq(url, "https://bitbucket.org/veracus/home/src/main/main.go", "url build")
 
+local url_no_lines = mod2._test.build_url(fake_root, "/repo/main.go", nil, nil)
+assert_eq(url_no_lines, "https://bitbucket.org/veracus/home/src/main/main.go", "url no lines")
+
 local url2 = mod2._test.build_url(fake_root, "/repo/dir/file.go", 5, 5)
 assert_eq(url2, "https://bitbucket.org/veracus/home/src/main/dir/file.go#lines-5", "url lines")
 

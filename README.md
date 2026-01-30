@@ -26,6 +26,7 @@ Use your preferred plugin manager. Example (lazy.nvim):
 ## Usage
 - `:BitbucketOpen` opens the current file
 - Visual select lines and run `:'<,'>BitbucketOpen` to include line anchors
+- No selection means no `#lines` fragment is added
 
 ## Configuration
 

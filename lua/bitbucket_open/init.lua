@@ -194,7 +194,11 @@ end
 function M.setup(opts)
   config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
   vim.api.nvim_create_user_command("BitbucketOpen", function(cmd)
-    M.open(cmd.line1, cmd.line2)
+    if cmd.range == 0 then
+      M.open(nil, nil)
+    else
+      M.open(cmd.line1, cmd.line2)
+    end
   end, { range = true })
 end
 

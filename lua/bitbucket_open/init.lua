@@ -30,7 +30,8 @@ end
 local function git(root, ...)
   local args = { "git", "-C", root }
   for i = 1, select("#", ...) do
-    table.insert(args, select(i, ...))
+    local v = select(i, ...)
+    table.insert(args, v)
   end
   local code, out, err = system_call(args)
   if code ~= 0 then
